@@ -1,0 +1,33 @@
+options(scipen = 999)
+DavenportR=function(p1,p2,p3,e1,e2,e3,f1,f2,f3,g1,g2,g3){
+  prod1=1*(p1^e3)*(p2^f3)*(p3^g3)
+  prod2=2*(p1^e3)*(p2^f3)*(p3^g3)
+  prod3=3*(p1^e3)*(p2^f3)*(p3^g3)
+  prod4=4*(p1^e3)*(p2^f3)*(p3^g3)
+  prod5=5*(p1^e3)*(p2^f3)*(p3^g3)
+  inn1=(p2^f3)*(p3^g3)*((p1^e1)+(p1^e2)-2)
+  inn2=(p3^g3)*((p2^f1)+(p2^f2)-2)
+  inn3=(p3^g1)+(p3^g2)-2
+  inn=inn1+inn2+inn3
+  du1=prod1+inn
+  du2=prod2+inn
+  du3=prod3+inn
+  du4=prod4+inn
+  du5=prod5+inn
+  add1=((p1^e1)*(p2^f1)*(p3^g1))-1
+  add2=((p1^e2)*(p2^f2)*(p3^g2))-1
+  add=add1+add2
+  dl1=prod1+add
+  dl2=prod2+add
+  dl3=prod3+add
+  dl4=prod4+add
+  dl5=prod5+add
+  df=inn-add
+  err1=(df/dl1)*100
+  err2=(df/dl2)*100
+  err3=(df/dl3)*100
+  err4=(df/dl4)*100
+  err5=(df/dl5)*100
+  d=c(du1,du2,du3,du4,du5,dl1,dl2,dl3,dl4,dl5,df,err1,err2,err3,err4,err5)
+  return(d)
+}
