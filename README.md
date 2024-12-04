@@ -4,3 +4,6 @@ The *r*-wise Davenport constant of a group is the least length of a multiset ove
 ___
 
 Repository: [https://github.com/anamitro/d-r-bounds](https://github.com/anamitro/d-r-bounds)
+
+| [My homepage](https://anamitro.github.io) |
+| --- |
